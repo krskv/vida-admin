@@ -1,0 +1,22 @@
+{
+  "name": "vida-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "krksv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krskv/vida-admin/issues"
+  },
+  "homepage": "https://github.com/krskv/vida-admin#readme",
+  "dependencies": {
+    "next": "^7.0.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
