@@ -1,6 +1,71 @@
 @import "templates/_vars.sass"
 
 .sidebar
-  width: 100%
+  width: $sidebar_w
   min-height: 100vh
   background-color: $sidebar_bg
+  .sidebar_head
+    padding: 20px 10px 10px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    button.sidebar_collapse
+      background: transparent
+      display: flex
+      justify-content: center
+      align-items: center
+      font-size: 18px
+      color: #bbb
+      cursor: pointer
+      width: 30px
+      height: 30px
+      border-radius: 8px
+      border: 1px solid rgba(69, 74, 84, 0.7)
+      &:focus,&:active
+        outline: none
+    .sidebar_logo
+      font-size: 42px
+      letter-spacing: 10px
+      font-weight: bold
+      color: white
+      max-width: 100px
+      width: 100px
+  nav.sidebar_navigation
+    ul
+      li
+        display: inline-flex
+        width: 100%
+        border-bottom: 1px solid rgba(69, 74, 84, 0.7)
+        a.sidebar_navlink
+          color: #aaabae
+          width: calc(100% - 20px)
+          height: 100%
+          padding: 10px
+          font-size: 14px
+          transition: color 250ms ease-in-out, background-color 250ms ease-in-out
+          & > span
+            padding-left: 8px
+          &:hover
+            background-color: rgba(255,255,255,.1)
+  &.collapsed
+    max-width: 50px
+    .sidebar_head
+      padding: 10px 0
+      justify-content: center
+      width: 100%
+      .sidebar_logo
+        display: none
+    nav.sidebar_navigation
+      ul
+        li
+          a
+            display: flex
+            font-size: 18px
+            justify-content: center
+            span
+              padding-left: 0
+              display: none
+
+    
+
+          

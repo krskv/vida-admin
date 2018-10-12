@@ -2,7 +2,7 @@
 
 .layout
   display: flex
-  justify-content: center
+  justify-content: space-between
   align-items: center
   
 .sidebar_wrapper, .page_wrapper
@@ -11,12 +11,7 @@
   flex-direction: column
   align-items: center
   min-height: 100vh
-  width: 100%
+  // width: 100%
 
 .page_wrapper
-  max-width: calc(100% - $sidebar_w)
-
-.sidebar_wrapper
-  max-width: $sidebar_w
-  
-.topbar_wrapper
+  width: 100%

@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../styles/topbar.sass"
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -21,7 +20,5 @@ const Topbar = () => (
     </div>
   </div>
 );
-
-{/* <Link href="/"><a className="nav-link">Home</a></Link> */}
 
 export default Topbar;

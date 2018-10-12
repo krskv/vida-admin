@@ -1,11 +1,14 @@
 import "../styles/main.sass"
 import Layout from '../components/layout'
 
-
-const App = (props) => (
+const Dashboard = () => (
   <Layout>
-    <h1>Home page</h1>
+    <h1>Dashboard</h1>
   </Layout>
 )
 
-export default App
+Dashboard.getInitialProps = async ({ pathname }) => {
+console.log(pathname);
+}
+
+export default Dashboard
