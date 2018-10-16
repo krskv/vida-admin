@@ -47,7 +47,7 @@ class LicenseTable extends React.Component {
     const desc = document.querySelector('input[name="description"]');
     const ip = document.querySelector('input[name="ip"]');
 
-    if( !id || !desc || !ip )
+    // if( !id || !desc || !ip )
 
 
     this.state.tableData.push({id:id.value,description: desc.value,ip: ip.value});
@@ -59,6 +59,7 @@ class LicenseTable extends React.Component {
   }
 
   getTableData(){
+    // throw new Error('I crashed!');
     return this.state.tableData.map((el) =>
       <tr key={el.id+Math.floor(Math.random()*100)}><td>{el.id}</td><td>{el.description}</td><td>{el.ip}</td><td><button className="license_table_remove remove"><FontAwesomeIcon icon="minus-circle"></FontAwesomeIcon></button></td></tr>
     );

@@ -1,12 +1,14 @@
-import "../styles/main.sass"
 import Layout from '../components/layout'
 import LicenseTable from '../components/license-table'
+import ErrorBoundary from './../components/error-boundries';
 
 
 const LicenseManagement = () => (
   <Layout>
     <h1>License management</h1>
-    <LicenseTable/>
+    <ErrorBoundary>
+      <LicenseTable/>
+    </ErrorBoundary>
   </Layout>
 )
 

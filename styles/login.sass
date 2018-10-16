@@ -1,0 +1,58 @@
+@import "templates/_vars.sass"
+
+.login_wrapper
+  min-height: 100vh
+  width: 100%
+  background: $dark_bg
+  display: flex
+  justify-content: center
+  flex-direction: column
+  align-items: center
+  h1
+    font-size: 60px
+    letter-spacing: 10px
+    margin: 0 auto 10px
+    font-weight: bold
+    color: $candy_green
+  p
+    color: #bbb
+    font-size: 14px
+  form
+    width: 100%
+    max-width: 320px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .login_input_wrapper
+      display: inline-flex
+      width: 100%
+      margin-top: 15px
+      .input_icon
+        font-size: 14px
+        color: #454a54
+        border-radius: 3px 0 0 3px
+        height: 100%
+        padding: 12px 8px
+        border: 1px solid #454a54
+        border-right: none
+        background: #373e4a
+    input
+      width: 100%
+      border: 1px solid #454a54
+      color: #bbb
+      border-radius: 0 3px 3px 0
+      font-size: 14px
+      letter-spacing: 1px
+      padding: 10px 8px
+      background: #373e4a
+    input[type="submit"]
+      border: none
+      cursor: pointer
+      padding: 11px 8px
+      color: #efefef
+      border-radius: 3px
+      margin-top: 30px
+      background-color: $candy_green
+
+

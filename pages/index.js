@@ -1,4 +1,3 @@
-import "../styles/main.sass"
 import Layout from '../components/layout'
 
 const Dashboard = () => (

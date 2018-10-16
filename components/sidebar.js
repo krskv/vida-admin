@@ -28,7 +28,10 @@ class Sidebar extends React.Component {
   }  
 
   componentDidMount() {
-    //onmount checks whether sidebar is collapsed or not
+    this.setSidebarStatusFromLocalStorage()
+  }
+
+  setSidebarStatusFromLocalStorage(){
     const sidebar_collapsed = localStorage.getItem("sidebar_collapsed")? localStorage.getItem("sidebar_collapsed"): "false";
     this.setState({sidebar_collapsed: (sidebar_collapsed == "true")});
   }
