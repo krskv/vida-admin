@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../styles/license-table.sass"
+import Alert from './alert'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMinusCircle,faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 
@@ -16,7 +17,7 @@ class LicenseTable extends React.Component {
     
 
     this.state = {
-      hasError: false,
+      alertShown: false,
       tableData: [
         {
           id: "123", 
@@ -37,18 +38,17 @@ class LicenseTable extends React.Component {
     };
   }
 
-  componentDidCatch(error, info) {
-    this.setState({ hasError: true });
-    logErrorToMyService(error, info);
-  }
-
   addNewLicense(){    
     const id = document.querySelector('input[name="id"]');
     const desc = document.querySelector('input[name="description"]');
     const ip = document.querySelector('input[name="ip"]');
-
-    // if( !id || !desc || !ip )
-
+    
+    if( !id.value || !desc.value || !ip.value  ){
+      this.setState({ alertShown: true });
+      return ;
+    }
+      
+    this.setState({ alertShown: false });
 
     this.state.tableData.push({id:id.value,description: desc.value,ip: ip.value});
     this.setState(state => ({
@@ -87,6 +87,7 @@ class LicenseTable extends React.Component {
             </tr>
           </tbody>
         </table>
+        { this.state.alertShown && <Alert color="red" title="Can't create license" text="One or more fields are empty"/> }
       </div>
     );
   }
